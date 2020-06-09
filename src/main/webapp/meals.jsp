@@ -44,13 +44,16 @@
         <th> Описание</th>
         <th> Калории</th>
     </tr>
-    <c:forEach var="mealTo" items="${mealToList}">
+    <c:forEach var="mealTo" items="${meals}">
         <tr style="color:${mealTo.excess ? 'red': 'green'}">
             <td>${mealTo.dateTime.format(DateTimeFormatter.ofPattern("dd-MM-yyyy hh:mm"))}</td>
             <td>${mealTo.description}</td>
             <td>${mealTo.calories}</td>
+            <td><a href="meals?action=edit&id=<c:out value="${mealTo.id}"/>">Изменить</a></td>
+            <td><a href="meals?action=delete&id=<c:out value="${mealTo.id}"/>">Удалить</a></td>
         </tr>
     </c:forEach>
 </table>
+<p><a href="meals?action=insert">Добавить</a></p>
 </body>
 </html>
