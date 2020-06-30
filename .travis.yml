@@ -5,7 +5,6 @@ sudo: false
 
 install: true
 script:
-  - ./mvnw clean install
   - bash <(curl -s https://codecov.io/bash)
 cache:
   directories:
