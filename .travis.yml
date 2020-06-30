@@ -17,4 +17,4 @@ notifications:
     on_failure: always
 env:
   global:
-    - CODECOV_TOKEN=:uuid-repo-token
+    - CODECOV_TOKEN="1ef021bc-8c77-4210-b147-07cf8707d50c"
