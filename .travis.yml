@@ -1,0 +1,18 @@
+language: java
+jdk: oraclejdk8
+
+sudo: false
+
+install: true
+script:
+  - ./mvnw clean install
+  - bash <(curl -s https://codecov.io/bash)
+cache:
+  directories:
+    - $HOME/.m2
+notifications:
+  email:
+    recipients:
+      - s9153104109@gmail.com
+    on_success: never
+    on_failure: always
